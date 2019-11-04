@@ -61,9 +61,14 @@
           width: 150px;
           margin-top: 10px;
 
+          @include b-desktop {
+            width: 100px;
+            height: auto;
+          }
+
           @include mobile-devices{
-            width: 160px;
-            margin-top: 16px;
+            width: 100px;
+            margin-top: 4px;
           }
 
           @include tablet{
@@ -71,7 +76,8 @@
           }
 
           @include phone {
-            margin-top: 2px;
+            width: 140px;
+            padding-bottom: 2px;
           }
         }
     }
@@ -79,14 +85,14 @@
     .hamburger{
       display: block;
       float: right;
-      padding-top: 2px;
+      padding-top: 4px;
 
       @include min768{
         display: none;
       }
 
       a{
-        font-size: 24px;
+        font-size: 34px;
         color: $color1;
 
         &:hover, &:focus{
@@ -113,16 +119,22 @@
   margin-top: 8px;
   border-top: 1px solid $color1;
   min-height: auto;
+  margin-top: -60px;
+
+  @include b-desktop {
+    margin-top: -50px;
+    margin-right: -80px;
+  }
 
 
   @include min768{
     float: right;
-    margin-top: -60px;
     border-top: none;
   }
 
   @include mobile-devices {
-    margin-top: -31px;
+    margin-top: -50px;
+    margin-right: -80px;
   }
 
   @include phone {
@@ -145,10 +157,14 @@
       margin-top: 3px;
       margin-bottom: 3px;
       list-style: none;
+      margin-right: 30px;
+
+      @include b-desktop {
+        margin-right: 16px;
+      }
 
       @include min768{
         float: left;
-        margin-right: 30px;
       }
 
       @include mobile-devices {

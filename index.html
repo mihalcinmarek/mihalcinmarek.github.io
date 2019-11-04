@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Baloo|Dosis:400,700&amp;subset=latin-ext" rel="stylesheet">
@@ -61,7 +61,7 @@
 
 
     <!-- content.scss -->
-    <section class="hero wow zoomIn">
+    <div class="hero wow zoomIn">
       <div class="container">
         <div class="row">
           <div class="col-md-8 hero-text">
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <section class="o-nas" id="o-nas">
       <div class="container">
@@ -85,7 +85,7 @@
             </ul>
             <p>V prípade, ak potrebujete geodetické práce, neváhajte nás kontaktovať a my Vám radi poskytneme naše <a class="js_slideto" href="#sluzby">služby</a>.</p>
           </div>
-          <div class="col-md-4 offset-2">
+          <div class="logo-gkk col-md-4 offset-2">
             <img src="img/logo.png" alt="logo"/>
           </div>
         </div>
@@ -413,7 +413,7 @@
               <p>Ivánska cesta 27,<br> 821 04 Bratislava - Ružinov <br></p>
               <p><strong>IČO</strong>: 35 976 942 <br><strong>DIČ</strong>: 2022118736 <br><strong>IČDPH</strong>: SK202 211 8736 </p>
               </div>
-              <div class="col-md-6 wow fadeInRight">
+              <div class="col-md-6 map wow fadeInRight">
                 <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=GKK-geodetick%C3%A1%20slu%C5%BEba%2Cs.r.o.%20Ivansk%C3%A1%20cesta%203776%2F27%2C%20821%2004&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://usave.co.uk"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
               </div>
             </div>
@@ -510,11 +510,11 @@
           autoplaySpeed: 2000,
           responsive: [
             {
-              breakpoint: 768,
+              breakpoint: 1000,
               settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '100px',
                 slidesToShow: 3
               }
             },
@@ -523,7 +523,16 @@
               settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '104px',
+                slidesToShow: 1
+              }
+            },
+            {
+              breakpoint: 330,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '54px',
                 slidesToShow: 1
               }
             }

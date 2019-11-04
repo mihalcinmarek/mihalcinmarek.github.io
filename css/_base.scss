@@ -1,12 +1,32 @@
 //main: styles.scss
 
+
+html,
 body{
-font-family: $font-default;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  font-family: $font-default;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100%;
+  cursor: default;
 }
 
 section {
   padding-top: 160px;
   padding-bottom: 168px;
+
+  @include b-desktop {
+    padding-top: 80px;
+    padding-bottom: 88px;
+  }
+
+  @include phone {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 h1 {
@@ -14,6 +34,10 @@ h1 {
   line-height: 56px;
   font-weight: bold;
 
+  @include b-desktop {
+    font-size: 34px;
+    line-height: 42px;
+  }
 }
 
 h2 {
@@ -26,11 +50,29 @@ h3 {
   font-size: 24px;
   line-height: 36px;
   font-weight: bold;
+
+  @include b-desktop {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 p {
   font-size: 22px;
   line-height: 28px;
+
+  @include b-desktop {
+    font-size: 20px;
+  }
+
+  @include mobile-devices {
+    font-size: 18px;
+  }
+
+  @include phone {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 a {
@@ -47,6 +89,11 @@ ul {
     font-size: 20px;
     line-height: 26px;
     list-style: square;
+
+    @include phone {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 }
 
