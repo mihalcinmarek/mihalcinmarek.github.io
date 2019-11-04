@@ -1,10 +1,10 @@
 // compileCompressed: $1.css
 
-@import 'bootstrap.min';
 @import 'variables';
 @import 'base';
-@import 'header';
-@import 'content';
-@import 'form';
-@import 'button';
-@import 'footer';
+@import 'menu';
+@import 'home';
+@import 'about';
+@import 'services';
+@import 'portfolio';
+@import 'contact';
