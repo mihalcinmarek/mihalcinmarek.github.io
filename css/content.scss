@@ -319,9 +319,30 @@
   	margin-bottom: 10vh;
     margin-left: -4vw;
 
-    @media (min-width: 2000px){
-      width: 85vw;
-      height: 50vh;
+
+		@media (min-width: 2400px) and (max-width: 2499px){
+			width: 65vw;
+			height: 55vh;
+		}
+
+		@media (min-width: 2300px) and (max-width: 2399px){
+			width: 68vw;
+			height: 55vh;
+		}
+
+		@media (min-width: 2200px) and (max-width: 2299px){
+      width: 71vw;
+      height: 55vh;
+    }
+
+		@media (min-width: 2100px) and (max-width: 2199px){
+      width: 77vw;
+      height: 56vh;
+    }
+
+    @media (min-width: 2000px) and (max-width: 2099px){
+      width: 77vw;
+      height: 53vh;
     }
 
     @media (min-width: 1900px) and (max-width: 1999px) {
