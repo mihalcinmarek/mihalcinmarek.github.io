@@ -95,11 +95,14 @@
   text-align: justify;
 
   @include phone {
-    text-align: center;
+    text-align: justify;
   }
 
 
   h2 {
+		@include phone {
+			text-align: center;
+		}
     padding-bottom: 40px;
   }
 
@@ -156,7 +159,7 @@
 
   ul {
     li {
-      padding-bottom: 8px;
+      padding-bottom: 16px;
 
       @include b-desktop {
         text-align: justify;
@@ -190,7 +193,7 @@
       font-weight: bold;
 
       @include phone {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       @include xxs-phone {
@@ -315,7 +318,7 @@
   {
   	width: 80vw;
   	height: 80vh;
-  	margin-top: 10vh;
+  	margin-top: 5vh;
   	margin-bottom: 10vh;
     margin-left: -4vw;
 
@@ -538,7 +541,7 @@
     padding-top: 28px;
     padding-bottom: 20px;
 
-      @include xxs-phone {
+      @include phone {
         font-size: 20px;
         text-align: center;
       }
@@ -562,33 +565,19 @@
     }
 
     .map {
-      @include b-desktop {
-        margin-left: -14%;
-      }
+		 	iframe {
+				@include b-desktop {
+					width: 110%!important;
+				}
 
-      @include mobile-devices {
-        margin-left: -7%;
-      }
+				@include mobile-devices {
+					width: 100%!important;
+				}
 
-      @include phone {
-        margin-left: 0%;;
-      }
-
-
-      .gmap_canvas {
-        @include mobile-devices {
-          width: 390px;
-        }
-
-        @include phone {
-          width: 340px;
-        }
-
-        @include phone {
-          width: 296px;
-        }
-
-      }
+				@include phone {
+					width: 100%!important;
+				}
+			}
     }
   }
 
