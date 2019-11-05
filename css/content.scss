@@ -322,6 +322,10 @@
   	margin-bottom: 10vh;
     margin-left: -4vw;
 
+		@media (min-width: 2500px) and (max-width: 2599px){
+			width: 63vw;
+			height: 55vh;
+		}
 
 		@media (min-width: 2400px) and (max-width: 2499px){
 			width: 65vw;
@@ -374,14 +378,19 @@
     }
 
     @media (min-width: 1400px) and (max-width: 1499px) {
-      width: 108vw;
+      width: 105vw;
       height: 50vh;
     }
 
     @media (min-width: 1300px) and (max-width: 1399px) {
-      width: 115vw;
+      width: 110vw;
       height: 50vh;
     }
+
+		@media (min-width: 1200px) and (max-width: 1299px) {
+			width: 115vw;
+			height: 50vh;
+		}
 
 
     @include b-desktop {
@@ -390,6 +399,7 @@
     }
 
     @include phone {
+			width: 90vw;
       height: 25vh;
     }
 
