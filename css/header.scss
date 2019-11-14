@@ -1,0 +1,220 @@
+//main: styles.scss
+
+.top-header{
+  position: fixed;
+  background-color: $color5;
+  z-index: 1000;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  padding-left: 100px;
+  padding-right: 100px;
+
+  animation-delay: 3s;
+
+  @include b-desktop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mobile-devices {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .fixed-top {
+    background-color: $color5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+.logo-section{
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+
+    @include min768 {
+      padding-top: 4px;
+      padding-bottom: 6px;
+    }
+
+    @include phone {
+      padding-top: 5px;
+      padding-bottom: 0px;
+    }
+
+    .collapse{
+    @include min768{
+      visibility: visible;
+      display: block;
+    }
+  }
+
+    .logo{
+
+        img {
+          display: block;
+          float: left;
+          width: 150px;
+          margin-top: 10px;
+
+          @include b-desktop {
+            width: 100px;
+            height: auto;
+          }
+
+          @include mobile-devices{
+            width: 100px;
+            margin-top: 4px;
+          }
+
+          @include tablet{
+            width: 180px;
+          }
+
+          @include phone {
+            width: 140px;
+            padding-bottom: 2px;
+          }
+        }
+    }
+
+    .hamburger{
+      display: block;
+      float: right;
+      padding-top: 4px;
+
+      @include min768{
+        display: none;
+      }
+
+      a{
+        font-size: 34px;
+        color: $color1;
+
+        &:hover, &:focus{
+          color: $color1;
+        }
+
+        .subpage &{
+          color: $color1;
+          &:hover, &:focus{
+            color: $color1;
+          }
+
+        }
+      }
+    }
+
+
+}
+
+.navbar{
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 8px;
+  border-top: 1px solid $color1;
+  min-height: auto;
+  margin-top: -60px;
+
+  @include b-desktop {
+    margin-top: -50px;
+    margin-right: -80px;
+  }
+
+
+  @include min768{
+    float: right;
+    border-top: none;
+  }
+
+  @include mobile-devices {
+    margin-top: -50px;
+    margin-right: -80px;
+  }
+
+  @include phone {
+    margin-top: 0;
+  }
+
+
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+
+    @include min768{
+      float: left;
+      padding: 0;
+    }
+
+    li{
+      margin-top: 3px;
+      margin-bottom: 3px;
+      list-style: none;
+      margin-right: 30px;
+
+      @include b-desktop {
+        margin-right: 16px;
+      }
+
+      @include min768{
+        float: left;
+      }
+
+      @include mobile-devices {
+        margin-right: 12px;
+      }
+
+      > a{
+        color: $color1;
+        font-size: 16px;
+
+
+        @include min768{
+          display: inline-block;
+          font-size: 22px;
+        }
+
+        @include mobile-devices {
+          font-size: 16px;
+        }
+
+        &:hover, &:focus{
+          color: $color4;
+          text-decoration: none;
+        }
+
+        .subpage &{
+          color: $color4;
+
+          &:hover, &:focus{
+            color: $color4;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.active{
+
+        a{
+            color: $color4;
+        }
+      }
+    }
+  }
+
+  .flag {
+    img {
+      width:20%;
+      height: auto;
+
+      margin-top: -3px;
+    }
+  }
+}

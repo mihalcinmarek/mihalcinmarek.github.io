@@ -1,0 +1,35 @@
+//main: styles.scss
+.btn{
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  text-transform: uppercase;
+
+  &.btn-primary{
+    background: $color1;
+    color: $color5;
+
+    &:hover, &:focus{
+      background: $color3;
+      color: $color5;
+    }
+  }
+
+  &.btn-lg{
+    padding: 12px 40px;
+    font-size: 20px;
+
+    @include xxs-phone {
+      padding: 12px 40px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+//main: styles.scss
+
+
+$color1 : #2F4F4F;
+$color2 :  #1a0602;
+$color3 : #f19c00;
+$color4 : #eb0011;
+$color5 : #ffffff;
+$color6 : #fafafa;
+
+
+/**
+*
+* fonts
+*
+**/
+
+$font-default: 'Roboto', sans-serif;
+$font-headline: 'Poppins', sans-serif;
+
+
+/**
+*
+* media queries mixins
+*
+**/
+
+$xxs-min-width: 330px;
+$phone-min-width: 480px;
+$phone-max-width: 480px;
+$tablet-min-width: 768px;
+$desktop-min-width: 992px;
+$big-display-width: 1200px;
+$xl-display-width: 1400px;
+$xxl-display-width: 1600px;
+
+/***** vacsie ako 480 *******/
+
+@mixin min480 {
+  @media all and (min-width: #{$phone-max-width}) {
+    @content;
+  }
+}
+
+/***** vacsie ako 768 *******/
+
+@mixin min768 {
+  @media all and (min-width: #{$tablet-min-width}) {
+    @content;
+  }
+}
+
+/***** mobily a tablety < 768 *******/
+
+@mixin tablet {
+  @media (max-width: #{$tablet-min-width - 1px}) {
+    @content;
+  }
+}
+
+
+/***** mobilne zariadenia < 992 *******/
+
+@mixin mobile-devices {
+  @media (max-width: #{$desktop-min-width - 1px}) {
+    @content;
+  }
+}
+
+/***** mobily < 480 *******/
+
+@mixin phone {
+  @media (max-width: #{$phone-min-width - 1px}) {
+    @content;
+  }
+}
+
+/***** xxs mobily < 330 *******/
+
+@mixin xxs-phone {
+  @media (max-width: #{$xxs-min-width - 1px}) {
+    @content;
+  }
+}
+
+/***** desktopy >= 992 *******/
+
+@mixin desktop {
+  @media (min-width: #{$desktop-min-width}) {
+    @content;
+  }
+}
+
+/***** deskto big < 1200 *******/
+@mixin b-desktop {
+  @media all and (max-width: #{$big-display-width}) {
+    @content;
+  }
+}
+
+/***** velke desktopy >=1200 *******/
+
+@mixin big-desktop {
+  @media (min-width: #{$big-display-width}) {
+    @content;
+  }
+}
+
+/***** velke desktopy >=1400 *******/
+
+@mixin xxl-desktop {
+  @media (min-width: #{$xl-display-width}) {
+    @content;
+  }
+}
+
+/***** velke desktopy >=1600 *******/
+
+@mixin xxl-desktop {
+  @media (min-width: #{$xxl-display-width}) {
+    @content;
+  }
+}

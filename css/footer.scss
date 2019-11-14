@@ -1,0 +1,22 @@
+//main: styles.scss
+
+footer {
+  text-align: center;
+  background-color: $color1;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  span {
+    color: $color5;
+    a {
+      color: $color5;
+      font-weight: bold;
+
+      &:hover {
+        color: $color4;
+        text-decoration: underline;
+      }
+    }
+  }
+}
